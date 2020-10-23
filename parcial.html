@@ -14,22 +14,56 @@
 
         <img id="sol" src="assets/sol.jpg">
         <img id="tierra" src="assets/tierra.jpg">
-        
+
     </a-assets>
 
 
     <a-scene artoolkit>
 
-        <a-marker-camera preset='hiro'>
+        <!--   <a-marker-camera preset='hiro'>
             <a-sphere src="#sol" position="0 0.15 0"  animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
 
-                <a-sphere src="#tierra" position="0 0 -3" scale="0.2 0.2 0.2" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+                
                 </a-sphere>
 
             </a-sphere>
-        </a-marker-camera>
+        </a-marker-camera> -->
 
-      <!--   <a-marker type='planeta1' url=''>
+        <a-marker type='pattern' url='Marcador/pattern-descargar.patt'
+            animation='property: rotation; to: 0 360 0; loop: true; dur: 10000' rotation="-90 0 0">
+
+
+
+            <a-sphere src="#sol" position="0 0 0"  scale="0.7 0.7 0.7">
+
+            </a-sphere>
+
+            <a-marker type='pattern' url='Marcador/pattern-images.patt'>
+
+
+
+                <a-sphere color="blue"  position="0 0 0" scale="0.5 0.5 0.5"
+                    animation='property: rotation; to: 0 360 0; loop: true; dur: 10000'></a-sphere>
+
+
+
+
+            </a-marker>
+
+
+        </a-marker>
+
+        <!--   <a-marker-camera preset='kanji'>
+            <a-sphere src="#tierra" position="0 0.15 0"  scale="0.00000000000002 0.00000000000002 0.00000000000002" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+
+                <a-sphere src="#tierra" position="0 0 -1"  animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+                </a-sphere>
+
+            </a-sphere>
+        </a-marker-camera> -->
+
+
+        <!--   <a-marker type='planeta1' url=''>
             <a-sphere src="#tierra" position="0 0 -15" a
                 animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
 
