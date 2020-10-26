@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+
+</head>
+
+<body>
+
+    <a-assets>
+
+
+        <img id="sol" src="Assets/sun.jpg">
+        <img id="tierra" src="Assets/tierra.jpg">
+        <img id="jupiter" src="Assets/jupiter.jpg">
+        <img id="marte" src="Assets/mars.jpg">
+        <img id="luna1" src="Assets/luna1.jpg">
+        <img id="luna2" src="Assets/luna2.jpg">
+
+    </a-assets>
+
+
+    <a-scene artoolkit>
+
+
+
+        <a-marker type='pattern' url='Marcadores/pattern-1.patt'
+            animation='property: rotation; to: 0 0 360; loop: true; dur: 10000'>
+
+
+
+            <a-sphere src="#sol" position="0 0 0" scale="0.7 0.7 0.7"
+                animation="property: rotation; to: 0 0 0; loop: true; dur: 10000">
+
+            </a-sphere>
+
+            <a-marker type='pattern' url='Marcadores/pattern-3.patt'
+                animation='property: rotation; to: 0 0 360; loop: true; dur: 10000'>
+
+                <a-sphere src="#tierra" position="0 0 -4" scale="0.5 0.5 0.5">
+
+                </a-sphere>
+
+                <a-marker type='pattern' url='Marcadores/pattern-4.patt'>
+
+                    <a-sphere src="#luna1" position="0 0 -2" scale="0.3 0.3 0.3"
+                        animation='property: rotation; to: 0 0 360; loop: true; dur: 10000'>
+
+                    </a-sphere>
+
+
+                </a-marker>
+
+                <a-marker type='pattern' url='Marcadores/pattern-5.patt'
+                animation='property: rotation; to: 0 0 360; loop: true; dur: 10000'>
+
+                <a-sphere src="#marte" position="0 0 -9" scale="0.3 0.3 0.3">
+
+                </a-sphere>
+
+                <a-marker type='pattern' url='Marcadores/pattern-6.patt'>
+
+                    <a-sphere src="#luna2" position="0 0 -2" scale="0.3 0.3 0.3"
+                        animation='property: rotation; to: 0 0 360; loop: true; dur: 10000'>
+
+                    </a-sphere>
+
+
+                </a-marker>
+
+            </a-marker>
+
+            <a-marker type='pattern' url='Marcadores/pattern-7.patt'
+                animation='property: rotation; to: 0 0 360; loop: true; dur: 10000'>
+
+                <a-sphere src="#jupiter" position="0 0 -14" scale="0.7 0.7 0.7">
+
+                </a-sphere>
+
+                
+
+            </a-marker>
+
+
+        </a-marker>
+
+        <a-entity camera></a-entity>
+
+    </a-scene>
+
+
+
+
+</body>
+
+</html>
