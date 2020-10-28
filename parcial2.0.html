@@ -11,7 +11,7 @@
 
 <body style='margin : 0px; overflow: hidden;'>
 
-    <a-scene artoolkit>
+    <a-scene embedded arjs='sourceType: webcam;'>
 
 
         <a-assets>
@@ -39,75 +39,57 @@
 
         <!--Marcador sol -->
 
-        <a-marker type='pattern' url='Marcadores/pattern-2.patt'
+        <a-marker type='pattern' url='Marcadores/23/pattern-Bandera-Suiza.patt'
             animation='property: rotation; to: 0 0 360; loop: true; dur: 10000'>
 
-            <a-sphere src="#sol" position="0 0 0" scale="0.7 0.7 0.7"
-                material="normalMap: #norsol;">
+            <a-sphere src="#sol" position="0 0 0" scale="0.5 0.5 0.5" material="normalMap: #norsol; ">
 
             </a-sphere>
-
-
-
-
             <!--Marcador planeta1 -->
-            <a-marker type='pattern' url='Marcadores/pattern-3.patt'
+            <a-marker type='pattern' url='Marcadores/23/pattern-images.patt'
                 animation='property: rotation; to: 0 0 360; loop: true; dur: 10000'>
 
-                <a-sphere src="#tierra" position="0 -6 0" scale="0.5 0.5 0.5" material="normalMap: #nortierra;"
-                    >
+                <a-sphere src="#tierra" position="0 0 -5" scale="0.2 0.2 0.2" material="normalMap: #nortierra;"
+                    animation='property: rotation; to: 0 0 360; loop: true; dur: 10000'>
 
-                    <a-sphere src="#luna1" position="0 0 -2" scale="0.3 0.3 0.3"
+                    <a-sphere src="#luna1" position="0 0 1.5" scale="0.3 0.3 0.3"
                         animation='property: rotation; to: 0 0 360; loop: true; dur: 10000'
                         material="normalMap: #norluna1;">
                     </a-sphere>
 
                 </a-sphere>
-                <!--Marcador luna1 >
-                <a-marker type='pattern' url='Marcadores/pattern-4.patt'>
+            </a-marker>
 
-                   
+            <a-marker type='pattern' url='Marcadores/23/pattern-Instagram-logo-de-600-600x600.patt'
+                animation='property: rotation; to: 0 0 -360; loop: true; dur: 10000'>
 
-                    </a-sphere>
-
-
-                </a-marker>
-                <Marcador planeta2 -->
-                <a-marker type='pattern' url='Marcadores/pattern-5.patt'
+                <a-sphere src="#marte" position="0 0 -8" scale="0.5 0.5 0.5" material="normalMap: #normarte;"
                     animation='property: rotation; to: 0 0 360; loop: true; dur: 10000'>
+                    <a-sphere src="#luna2" position="0 0 1.5" scale="0.3 0.3 0.3"
+                        animation='property: rotation; to: 0 0 -360; loop: true; dur: 10000'
+                        material="normalMap: #norluna2;">
 
-                    <a-sphere src="#marte" position="0 0 -9" scale="0.5 0.5 0.5" material="normalMap: #normarte;">
-                        <a-sphere src="#luna2" position="0 0 -2" scale="0.3 0.3 0.3"
-                            animation='property: rotation; to: 0 0 360; loop: true; dur: 10000'
-                            material="normalMap: #norluna2;">
-
-                        </a-sphere>
                     </a-sphere>
-                    <!--Marcador luna2 >
-                    <a-marker type='pattern' url='Marcadores/pattern-6.patt'>
+                </a-sphere>
 
+            </a-marker>
 
+            <a-marker type='pattern' url='Marcadores/23/pattern-330px-Color_icon_green.svg.patt'
+                animation='property: rotation; to: 0 -12 360; loop: true; dur: 10000'>
 
+                <a-sphere src="#jupiter" position="0 0 4" scale="0.2 0.2 0.2" material="normalMap: #norjupiter;">
 
-                    </a-marker-->
+                </a-sphere>
 
-                </a-marker>
-                <Marcador planeta3>
-                    <a-marker type='pattern' url='Marcadores/pattern-images.patt'
-                        animation='property: rotation; to: 0 0 360; loop: true; dur: 10000'>
-
-                        <a-sphere src="#jupiter" position="0 0 -14" scale="0.7 0.7 0.7"
-                            material="normalMap: #norjupiter;">
-
-                        </a-sphere>
-
-
-
-                    </a-marker>
 
 
             </a-marker>
-            <a-entity camera></a-entity>
+
+
+        </a-marker>
+
+        </a-marker>
+        <a-entity camera></a-entity>
     </a-scene>
 
 </body>
